@@ -1,0 +1,43 @@
+
+# Merged Enhanced RAG Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 33
+- Evaluation date: 2025-07-16 09:45:52
+- Average chunks retrieved per query: 5.0
+- Average sources used per query: 1.0
+
+## Context Retrieval Quality
+- Average Relevance: 0.597 (±0.253)
+- Average Coverage: 0.473
+- Average Noise Level: 0.452
+- Simple Retriever Score: 0.494
+
+## Response Generation Quality
+- Average Accuracy: 0.864
+- Average Completeness: 0.758
+- Average Relevance: 0.891
+- Average Conciseness: 0.927
+- **Overall Score: 0.862 (±0.049)**
+
+## Performance Distribution
+- Excellent (≥0.8): 93.9%
+- Good (0.6-0.8): 6.1%
+- Poor (<0.6): 0.0%
+
+## Top Performing Examples
+                                                                                                                  question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              response_explanation
+11                I broke a piece of my tooth, I had this corrected because I didn't like the look of it, is this covered?                    1.00  The response is factually correct as it accurately interprets the insurance policy context regarding dental treatment coverage. It comprehensively addresses the question by explaining why cosmetic dental treatment is not covered, referencing the policy's stipulations about medical necessity and accident-related treatments. The response is relevant and directly answers the question using the provided context. It is concise, delivering the necessary information without any superfluous details.
+22  I had to go back because my neighbor passed away and I want to go to the funeral, can I go home early and submit this?                    0.95       The response accurately reflects the context provided, noting that the context does not mention coverage for neighbors, which is factually correct. It is relevant to the question as it directly addresses the query about trip cancellation due to a neighbor's death. The response is concise and avoids unnecessary details. However, it could be more complete by suggesting possible next steps, such as checking the full policy or contacting the insurance provider for specific coverage details.
+27                                                       I got a flat tire, which made me miss my flight. Is this covered?                    0.93                           The response accurately identifies that the provided context does not cover missed flights due to a flat tire, focusing instead on baggage and theft coverage. It suggests checking other sections of the policy or contacting the provider, which is a reasonable next step. While the response is relevant and concise, it could be more complete by explicitly stating that the context does not mention coverage for missed flights due to vehicle issues, rather than implying it.
+
+## Worst Performing Examples
+                                                                                              question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   response_explanation
+7   was in bed for three days because I was nauseous, can I get compensation for unused vacation days?                   0.750                                                                                                                    The response accurately identifies that compensation may be available for unused travel days due to illness, but it focuses on pre-paid services like ski passes, which may not directly relate to unused vacation days. The completeness is moderate as it does not fully address whether unused vacation days specifically are covered. The relevance is high as it uses the context to address the question, but it could better align with the specific query about vacation days. The response is concise and avoids unnecessary information, making it clear.
+29         I have car trouble, the car is 12 years old and it was repaired the same day, am I covered?                   0.775  The response is mostly accurate as it correctly identifies that the context does not provide specific information about coverage for car trouble or repairs. However, it could have mentioned that the context does provide some general conditions for coverage, such as the requirement for a valid driver's license. The completeness score is lower because the response does not fully explore the implications of the context provided, such as the need to report damage promptly. The relevance is high because the response uses the context appropriately to answer the question. The conciseness is very high as the response is clear and avoids unnecessary information.
+2                                    There is a strike on the German railways next week, can I cancel?                   0.825   The response accurately identifies that the provided context does not specifically address cancellations due to railway strikes, which is factually correct based on the context. However, it could be more complete by suggesting potential steps or considerations for the user, such as checking specific policy details or contacting the insurance provider. The response is relevant as it correctly identifies the lack of specific information about railway strikes in the context and suggests contacting the insurance provider. It is concise and avoids unnecessary information, focusing on the key issue of the lack of specific coverage information in the context.
+
+## Retrieval Analysis
+- Context relevance vs Response quality correlation: -0.058
+- Simple retriever vs Enhanced retriever correlation: 0.670
+- Sources most frequently used: {'asr_travel.pdf': 33}

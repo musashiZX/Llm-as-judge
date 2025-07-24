@@ -1,0 +1,35 @@
+
+# LLM-as-a-Judge Baseline Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 33
+- Evaluation date: 2025-07-15 08:20:07
+
+## Context Retrieval Quality
+- Average Relevance: 0.721 (±0.281)
+- Average Coverage: 0.615
+- Average Noise Level: 0.876
+
+## Response Generation Quality
+- Average Accuracy: 0.864
+- Average Completeness: 0.776
+- Average Relevance: 0.948
+- Average Conciseness: 0.955
+- **Overall Score: 0.886 (±0.153)**
+
+## Performance Distribution
+- Excellent (≥0.8): 81.8%
+- Good (0.6-0.8): 12.1%
+- Poor (<0.6): 6.1%
+
+## Top Performing Examples
+                                                                                                                                       question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                    response_explanation
+10                                       broke a piece of my tooth, I had this corrected because I didn't like the look of it, is this covered?                     1.0                                                                                                                          The generated response accurately reflects the ground truth answer by stating that the correction for aesthetic reasons is not covered. It covers all important points, is relevant to the question and context, and is clear and concise without any unnecessary information.
+13  I am a self-employed person and my telephone that I bought privately but use for business purposes is irreparably damaged. Is this insured?                     1.0                                                                     The generated response accurately reflects the ground truth answer, stating that damage to the phone is not insured if used for business purposes. It covers all necessary points, is directly relevant to the question, and uses the context appropriately. The response is clear and concise without any unnecessary information.
+16                                                                              My suitcase fell, it has scratches and a dent. Is this insured?                     1.0  The generated response accurately reflects the information provided in the context and matches the ground truth answer. It correctly states that superficial damage such as scratches and dents is not insured, covering all important points. The response is relevant to the question and uses the context appropriately. Additionally, it is clear and concise without any unnecessary information.
+
+## Worst Performing Examples
+                                                             question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 response_explanation
+9              I bought paracetamol at the pharmacy, is this covered?                   0.325         The generated response inaccurately states that buying paracetamol is covered, which contradicts the ground truth answer that it is not covered. Therefore, accuracy and completeness scores are both 0. The response is somewhat relevant as it discusses the conditions under which medication use might affect insurance coverage, but it fails to directly address the specific question about paracetamol coverage, hence a relevance score of 0.5. The response is concise, directly addressing the question without unnecessary information, resulting in a conciseness score of 0.8.
+26  I got a flat tire, which made me miss my flight. Is this covered?                   0.525  The generated response inaccurately suggests that the situation might be covered, which contradicts the ground truth answer that explicitly states it is not covered. The response does not fully address the ground truth, which clearly states the coverage exclusion. While the response is relevant to the question and uses the context appropriately, it introduces uncertainty by suggesting the need to check policy terms, which is not necessary according to the ground truth. The response is relatively concise but includes some unnecessary information about checking policy terms.
+18                I have been robbed of my car keys, is this insured?                   0.680                                                                                                                                                                                                    The response accurately notes that the provided context does not mention car keys specifically, but it fails to directly state the ground truth that car keys are not covered under travel insurance. It suggests checking the full policy, which is relevant advice, but does not fully answer the question as per the ground truth. The response is concise and avoids unnecessary information.

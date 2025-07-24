@@ -1,0 +1,18 @@
+{
+  "avg_context_relevance": 0.5969696969696969,
+  "avg_context_coverage": 0.47272727272727266,
+  "avg_context_noise_level": 0.45151515151515154,
+  "avg_simple_retriever_score": 0.49393939393939396,
+  "avg_response_accuracy": 0.8636363636363638,
+  "avg_response_completeness": 0.7575757575757576,
+  "avg_response_relevance": 0.8909090909090909,
+  "avg_response_conciseness": 0.9272727272727274,
+  "avg_response_overall": 0.8618181818181817,
+  "std_context_relevance": 0.2530870014501541,
+  "std_response_overall": 0.04852219501517744,
+  "excellent_responses": 0.9393939393939394,
+  "good_responses": 0.06060606060606061,
+  "poor_responses": 0.0,
+  "avg_chunks_retrieved": 5.0,
+  "avg_sources_used": 1.0
+}

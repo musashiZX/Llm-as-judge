@@ -1,0 +1,43 @@
+
+# Merged Enhanced RAG Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 12
+- Evaluation date: 2025-07-16 07:58:00
+- Average chunks retrieved per query: 5.0
+- Average sources used per query: 1.0
+
+## Context Retrieval Quality
+- Average Relevance: 0.250 (±0.243)
+- Average Coverage: 0.167
+- Average Noise Level: 0.292
+- Simple Retriever Score: 0.167
+
+## Response Generation Quality
+- Average Accuracy: 0.433
+- Average Completeness: 0.408
+- Average Relevance: 0.700
+- Average Conciseness: 0.808
+- **Overall Score: 0.589 (±0.169)**
+
+## Performance Distribution
+- Excellent (≥0.8): 16.7%
+- Good (0.6-0.8): 50.0%
+- Poor (<0.6): 33.3%
+
+## Top Performing Examples
+                                                                question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    response_explanation
+8  I lost an earring. I have no idea where it happened. Is this insured?                    0.85  The response is mostly accurate, correctly identifying that the loss of an earring is not insured under the conditions provided. It elaborates on the specific conditions under which theft outside the home might be covered, which is relevant and useful information. However, it slightly over-explains the conditions, which affects conciseness. Completeness is slightly lower because the ground truth answer is more direct and does not delve into specifics. Overall, the response is well-structured and relevant to the question, with minor deductions for completeness and conciseness.
+3               I tripped outside and broke my glasses. Is this covered?                    0.80                                                                                                                  The generated response accurately identifies that the context does not cover personal items like glasses broken due to tripping outside, which aligns with the ground truth answer. However, it does not explicitly state that such damage is not insured, which slightly affects completeness. The response is relevant as it correctly interprets the context provided. It is concise, but could be slightly more direct in stating the lack of coverage for the specific situation.
+5      The microwave broke down due to a short circuit. Is this insured?                    0.68                                                                                                                                         The response accurately identifies that the provided context does not explicitly cover short circuits, but it fails to mention the ground truth that short circuit damage is not insured. It is relevant to the question and uses the context appropriately, but lacks completeness as it does not address the specific exclusion mentioned in the ground truth. The response is concise and clear, focusing on the main issue without unnecessary information.
+
+## Worst Performing Examples
+                                                                     question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   response_explanation
+0                        A ball went through my window. Will this be covered?                    0.33                                  The response is inaccurate as it fails to identify that glass breakage due to unforeseen events is covered, which is stated in the ground truth. It does not address the key point of coverage for accidental damage, hence scoring low on completeness. The response is somewhat relevant as it correctly identifies the lack of specific context about ball damage but misses the broader coverage aspect. It is concise, providing a clear answer without unnecessary information.
+11  Due to a dishwasher leak, the laminate started to bulge. Is this insured?                    0.33                  The response is factually incorrect as it does not align with the ground truth, which states that damage from defective pipes and installations is insured. It lacks completeness because it does not cover the key point that such damage is insured. The relevance is moderate because it correctly identifies the need to check specific insurance terms but fails to utilize the provided context effectively. The response is concise, providing a clear answer without unnecessary information.
+1                                        I dropped my phone. Is this covered?                    0.43  The generated response does not accurately address the question based on the ground truth, which states that phone damage due to sudden events is covered if mobile electronics are insured. The response lacks completeness as it does not mention this key point. While the response is somewhat relevant, as it suggests checking policy details, it does not effectively use the context to provide a definitive answer. The response is concise, but it omits critical information needed for a complete answer.
+
+## Retrieval Analysis
+- Context relevance vs Response quality correlation: 0.251
+- Simple retriever vs Enhanced retriever correlation: 0.819
+- Sources most frequently used: {'indoor_aegon.pdf': 12}

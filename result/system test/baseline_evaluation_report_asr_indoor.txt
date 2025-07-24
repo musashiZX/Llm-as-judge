@@ -1,0 +1,35 @@
+
+# LLM-as-a-Judge Baseline Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 12
+- Evaluation date: 2025-07-15 08:16:32
+
+## Context Retrieval Quality
+- Average Relevance: 0.775 (±0.286)
+- Average Coverage: 0.650
+- Average Noise Level: 0.892
+
+## Response Generation Quality
+- Average Accuracy: 0.850
+- Average Completeness: 0.783
+- Average Relevance: 0.942
+- Average Conciseness: 0.917
+- **Overall Score: 0.873 (±0.200)**
+
+## Performance Distribution
+- Excellent (≥0.8): 83.3%
+- Good (0.6-0.8): 8.3%
+- Poor (<0.6): 8.3%
+
+## Top Performing Examples
+                                                                     question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                        response_explanation
+5           The microwave broke down due to a short circuit. Is this insured?                   1.000                                                                                                                     The generated response accurately reflects the ground truth answer, stating that the damage caused by a short circuit is not insured according to the policy. It covers all important points, is directly relevant to the question, and is concise without any unnecessary information.
+11  Due to a dishwasher leak, the laminate started to bulge. Is this insured?                   1.000  The generated response accurately reflects the ground truth answer, stating that the damage is insured due to a dishwasher leak. It covers all important points, including the cause of the damage and the applicable insurance coverage. The response is relevant to the question and uses the provided context appropriately. Additionally, it is clear and concise without any unnecessary information.
+0                        A ball went through my window. Will this be covered?                   0.975              The generated response is factually correct and matches the ground truth answer, covering all important points about the insurance coverage for glass breakage due to sudden and unforeseen events. It is relevant to the question and uses the context appropriately. The response is mostly concise, but slightly more verbose than necessary, which slightly impacts the conciseness score.
+
+## Worst Performing Examples
+                                                                                         question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    response_explanation
+6                  I sat on my glasses on the couch and broke them. Is this covered by insurance?                   0.325                                                                The generated response inaccurately suggests that the damage might be covered by insurance, which contradicts the ground truth answer stating it is not covered. Therefore, the accuracy and completeness scores are low. The response is somewhat relevant as it attempts to address the question using the context, but it misinterprets the context, leading to a moderate relevance score. The response is concise and clear, earning a higher score in conciseness.
+4  My phone slipped out of my hands and fell into the water and was never found. Is this insured?                   0.625  The generated response correctly identifies the need to check the insurance policy for coverage details, which is relevant to the question. However, it does not accurately reflect the ground truth that loss of mobile electronics is explicitly excluded from compensation. The response is somewhat complete in discussing the variability of insurance coverage but misses the definitive exclusion stated in the ground truth. It is concise but could be clearer by directly addressing the exclusion mentioned in the context.
+1                                                            I dropped my phone. Is this covered?                   0.900                                        The generated response is mostly accurate, correctly stating that damage is covered if the policy includes mobile electronics. However, it slightly misinterprets the context by suggesting that dropping the phone is covered under sudden and unforeseen events, which is not explicitly stated in the ground truth. The response is relevant and uses the context appropriately, addressing the question directly. It is concise, providing necessary information without extraneous details.

@@ -1,0 +1,43 @@
+
+# Merged Enhanced RAG Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 12
+- Evaluation date: 2025-07-16 08:39:16
+- Average chunks retrieved per query: 5.0
+- Average sources used per query: 1.0
+
+## Context Retrieval Quality
+- Average Relevance: 0.250 (±0.239)
+- Average Coverage: 0.158
+- Average Noise Level: 0.358
+- Simple Retriever Score: 0.175
+
+## Response Generation Quality
+- Average Accuracy: 0.900
+- Average Completeness: 0.783
+- Average Relevance: 0.892
+- Average Conciseness: 0.933
+- **Overall Score: 0.879 (±0.036)**
+
+## Performance Distribution
+- Excellent (≥0.8): 100.0%
+- Good (0.6-0.8): 0.0%
+- Poor (<0.6): 0.0%
+
+## Top Performing Examples
+                                                                     question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            response_explanation
+3                    I tripped outside and broke my glasses. Is this covered?                    0.93                                                         The response is accurate as it correctly identifies that the context does not provide information on coverage for personal items like glasses. It is mostly complete, addressing the question by stating that the context does not cover personal items, but could improve by suggesting checking other parts of the policy or contacting the insurer directly. The response is relevant, using the context appropriately to determine that the coverage mentioned is not applicable to the situation. It is concise, directly addressing the question without unnecessary information.
+11  Due to a dishwasher leak, the laminate started to bulge. Is this insured?                    0.92  The response is factually correct as the provided context does not contain information about coverage for water damage or household contents. It suggests checking the specific terms and conditions, which is accurate. The response is mostly complete but could be improved by mentioning that the context provided does not cover the specific insurance details needed. The response is relevant as it addresses the question and uses the context appropriately, although the context itself is not directly related to the question. The response is clear and concise, providing necessary information without any extraneous details.
+0                        A ball went through my window. Will this be covered?                    0.90                                                                                                                                                                                                            The response accurately identifies that the provided context does not address coverage for damage caused by a ball going through a window. It suggests referring to other sections of the insurance policy or contacting the provider, which is a reasonable recommendation. The response is concise and directly addresses the question, but it could be slightly more complete by suggesting specific sections to check, if known.
+
+## Worst Performing Examples
+                                                                                question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              response_explanation
+7  My laptop was stolen from the trunk of my car. A window was smashed. Is this insured?                   0.800  The response is mostly accurate as it correctly identifies that the provided context does not specify coverage for theft from a vehicle or damage to the vehicle itself. It suggests referring to the insurance policy or contacting the provider for specific coverage details, which is a reasonable recommendation. However, it could be more complete by explicitly stating that the context does not mention coverage for laptops stolen from a car. The response is relevant as it addresses the question using the context provided, and it is concise, avoiding unnecessary information.
+2    My roof is leaking, causing damage to the ceiling. Is painting the ceiling insured?                   0.825                      The response accurately identifies that the context does not specifically address insurance coverage for painting the ceiling due to roof leakage. It correctly notes that the context mentions coverage for water damage but lacks details on cosmetic repairs. The response is relevant to the question and uses the context appropriately, advising to check other sections or contact the insurer. However, it could be more complete by suggesting specific sections or keywords to look for in the policy. The response is concise and avoids unnecessary information.
+6         I sat on my glasses on the couch and broke them. Is this covered by insurance?                   0.875                          The response is mostly accurate as it correctly identifies that the context does not specifically cover accidental damage to personal items like glasses. It is complete in advising the user to check their personal belongings coverage or contact their insurance provider, though it could be more explicit about the lack of relevant information in the provided context. The relevance is high because the response appropriately uses the context to address the question. The response is concise and avoids unnecessary information, providing a clear answer.
+
+## Retrieval Analysis
+- Context relevance vs Response quality correlation: -0.292
+- Simple retriever vs Enhanced retriever correlation: 0.826
+- Sources most frequently used: {'indoor_aegon.pdf': 12}

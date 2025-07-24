@@ -1,0 +1,43 @@
+
+# Merged Enhanced RAG Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 33
+- Evaluation date: 2025-07-16 10:44:28
+- Average chunks retrieved per query: 5.0
+- Average sources used per query: 1.0
+
+## Context Retrieval Quality
+- Average Relevance: 0.606 (±0.263)
+- Average Coverage: 0.488
+- Average Noise Level: 0.464
+- Simple Retriever Score: 0.397
+
+## Response Generation Quality
+- Average Accuracy: 0.588
+- Average Completeness: 0.533
+- Average Relevance: 0.812
+- Average Conciseness: 0.858
+- **Overall Score: 0.699 (±0.167)**
+
+## Performance Distribution
+- Excellent (≥0.8): 33.3%
+- Good (0.6-0.8): 48.5%
+- Poor (<0.6): 18.2%
+
+## Top Performing Examples
+                                                                  question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                           response_explanation
+2      My son has to retake an exam, so I want to cancel. Is this covered?                    1.00                                             The generated response accurately reflects the ground truth by stating that retaking an exam is not a covered reason for cancellation under the Aegon Travel Insurance policy. It covers all important points, is relevant to the question, and uses the context appropriately. The response is clear and concise without unnecessary information.
+12  My suitcase arrived at the airport with a torn strap, is this insured?                    0.95  The generated response correctly identifies that damage like scratches and dents to suitcases is not insured, which aligns with the ground truth. It extends this to include a torn strap, which is a reasonable interpretation given the context, hence slightly enhancing completeness. The response is relevant and concise, directly addressing the question without unnecessary details.
+16         My suitcase fell, it has scratches and a dent. Is this insured?                    0.95                           The generated response accurately states that scratches and dents to suitcases are not insured, which aligns with the ground truth. It is concise and directly relevant to the question, using the context appropriately. However, it lacks the specific mention of 'damage caused by falls,' which is present in the ground truth, slightly affecting completeness.
+
+## Worst Performing Examples
+                                                                                                                                     question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              response_explanation
+15                                                                                                      I dropped my tablet, is this covered?                   0.325                             The generated response inaccurately states that accidental damage like dropping a tablet is not covered, which contradicts the ground truth that such damage is covered with a deductible. The response fails to mention the deductible, affecting both accuracy and completeness. The relevance score is moderate as the response does attempt to address the question using the context, but it misses the key point about coverage for accidental damage. The response is concise, as it does not contain unnecessary information.
+24  was stuck in traffic, I had taken half an hour's margin but came to a complete standstill during rush hour, is this covered by insurance?                   0.425  The response is not factually correct as it doesn't align with the ground truth that specifies conditions under which traffic delays might be covered. It lacks completeness because it doesn't mention the specific conditions related to traffic delays and compensation eligibility. The relevance is moderate since it correctly identifies that the provided context does not directly address traffic delays, but it fails to use the ground truth information effectively. The response is concise, providing a clear answer without unnecessary details.
+14                                                                   I rented skis and they are damaged. I have to pay €400, is this insured?                   0.475           The generated response inaccurately states that the insurance covers €250 for rented skis, which is not supported by the context or ground truth. The ground truth clearly states that damage to rented skis is not insured, which the response fails to mention. While the response is somewhat relevant, as it discusses insurance coverage related to skis, it does not accurately address the specific question about rented skis. The response is concise, but it includes incorrect information, affecting its overall accuracy and completeness.
+
+## Retrieval Analysis
+- Context relevance vs Response quality correlation: 0.271
+- Simple retriever vs Enhanced retriever correlation: 0.603
+- Sources most frequently used: {'aegon_travel.pdf': 33}
