@@ -7,6 +7,10 @@
 # Allow this file
 !.gitignore
 
+# Allow documentation and requirements
+!README.md
+!requirements.txt
+
 # Explicitly ignore sensitive files (redundant but safe)
 .env
 .env.local

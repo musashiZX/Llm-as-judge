@@ -1,0 +1,11 @@
+openai
+python-dotenv
+pandas
+numpy
+sentence-transformers
+pdfplumber
+faiss-cpu
+nltk
+scikit-learn
+openpyxl
+jupyter
