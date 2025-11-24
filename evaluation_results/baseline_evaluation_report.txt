@@ -1,0 +1,35 @@
+
+# LLM-as-a-Judge Baseline Evaluation Report
+
+## Dataset Summary
+- Total samples evaluated: 33
+- Evaluation date: 2025-11-24 22:26:13
+
+## Context Retrieval Quality
+- Average Relevance: 0.379 (±0.281)
+- Average Coverage: 0.297
+- Average Noise Level: 0.379
+
+## Response Generation Quality
+- Average Accuracy: 0.588
+- Average Completeness: 0.518
+- Average Relevance: 0.773
+- Average Conciseness: 0.848
+- **Overall Score: 0.682 (±0.169)**
+
+## Performance Distribution
+- Excellent (≥0.8): 30.3%
+- Good (0.6-0.8): 42.4%
+- Poor (<0.6): 27.3%
+
+## Top Performing Examples
+                                                                    question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 response_explanation
+14  I rented skis and they are damaged. I have to pay €400, is this insured?                   1.000                                                                                                                                                                          The generated response accurately states that damage to rented skis is not insured, aligning perfectly with the ground truth answer. It covers all necessary points, is directly relevant to the question, and uses the context appropriately. The response is clear and concise, providing only the essential information without any superfluous details.
+9                     I bought paracetamol at the pharmacy, is this covered?                   0.975  The generated response accurately states that purchasing paracetamol at a pharmacy is not covered by the insurance policy, aligning with the ground truth. It is complete as it addresses the key point of the ground truth answer. The relevance is slightly lower because the response could more directly state the lack of coverage without referencing the context, which does not explicitly mention medication coverage. The response is clear and concise, directly answering the question without unnecessary information.
+16           My suitcase fell, it has scratches and a dent. Is this insured?                   0.975                                                                                     The generated response accurately states that scratches and dents to suitcases are not insured, which aligns with the ground truth. It is relevant to the question and uses the context appropriately. The response is concise and clear, providing the necessary information without any extraneous details. However, it slightly lacks completeness as it does not explicitly mention 'caused by falls,' which is present in the ground truth.
+
+## Worst Performing Examples
+                                                                                                                  question  response_overall_score                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              response_explanation
+5       was standing in a bar I turned around and before I knew it my bag had been stolen from the stool, is this covered?                   0.325                                                                                                                                                                The response inaccurately states that the theft is covered, contradicting the ground truth that specifies theft without direct supervision is not covered. Completeness is low as it fails to mention the supervision condition. Relevance is moderate as it addresses the question but misinterprets the context. Conciseness is high as the response is clear and lacks unnecessary information.
+21  I had to go back because my neighbor passed away and I want to go to the funeral, can I go home early and submit this?                   0.425                                                                                              The generated response does not accurately reflect the ground truth answer, which states that reasonable additional costs for returning due to a neighbor's death are covered. The response lacks completeness as it misses this key point. However, it is somewhat relevant as it discusses checking the policy details, which is a reasonable suggestion given the context. The response is concise, providing a clear suggestion without unnecessary information.
+1                                                        There is a strike on the German railways next week, can I cancel?                   0.450  The generated response correctly identifies that the provided context does not contain specific information about cancellations due to a strike on the German railways. However, it does not provide the factual answer given in the ground truth, which states that cancellations due to strikes are not insured. The response is relevant in suggesting checking the travel insurance policy, but it lacks completeness in addressing the specific policy exclusion mentioned in the ground truth. The response is concise and avoids unnecessary information.

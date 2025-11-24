@@ -11,6 +11,10 @@
 !README.md
 !requirements.txt
 
+# Allow evaluation results
+!evaluation_results/
+!evaluation_results/**
+
 # Explicitly ignore sensitive files (redundant but safe)
 .env
 .env.local

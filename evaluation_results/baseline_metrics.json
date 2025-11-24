@@ -1,0 +1,15 @@
+{
+  "avg_context_relevance": 0.3787878787878788,
+  "avg_context_coverage": 0.29696969696969694,
+  "avg_context_noise_level": 0.3787878787878788,
+  "avg_response_accuracy": 0.5878787878787879,
+  "avg_response_completeness": 0.5181818181818181,
+  "avg_response_relevance": 0.7727272727272727,
+  "avg_response_conciseness": 0.8484848484848485,
+  "avg_response_overall": 0.6819696969696969,
+  "std_context_relevance": 0.28146666738440784,
+  "std_response_overall": 0.16854589227575467,
+  "excellent_responses": 0.30303030303030304,
+  "good_responses": 0.42424242424242425,
+  "poor_responses": 0.2727272727272727
+}
