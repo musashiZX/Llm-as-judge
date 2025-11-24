@@ -14,6 +14,3 @@
 # Explicitly ignore sensitive files (redundant but safe)
 .env
 .env.local
-
-# Allow temporary script
-!modify_notebook.py
